@@ -13,7 +13,7 @@ distributed under the License is distributed on an "AS IS" BASIS,
 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
--->
+
 <title>User Details</title>
 
 <h2>User Details </h2>
@@ -30,4 +30,24 @@ limitations under the License.
         <td><b>Last Name</b></td>
         <td>${user.lastName }</td>
     </tr>
+</table>
+-->
+
+
+<title>All Users</title>
+
+<%@ taglib prefix="s" uri="/struts-tags" %>
+<table>
+   <tr>
+       <th>ID</th>
+       <th>First Name</th>
+       <th>Last Name</th>
+   </tr>
+   <s:iterator value="users">
+       <tr>
+           <td><s:property value="id"/></td>
+           <td><s:property value="firstName"/></td>
+           <td><s:property value="lastName"/></td>
+       </tr>
+   </s:iterator>
 </table>

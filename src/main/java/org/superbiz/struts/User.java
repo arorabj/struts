@@ -30,11 +30,14 @@ public class User implements Serializable {
     private String firstName;
     private String lastName;
 
-    public User(long id, String firstName, String lastName) {
+    private UserService userService;
+
+    public User(long id, String firstName, String lastName, UserService userService) {
         super();
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
+        this.userService = userService;
     }
 
     public User() {
